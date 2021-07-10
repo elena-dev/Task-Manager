@@ -1,0 +1,363 @@
+:root {
+    --red: #ED1C24;
+    --darkred: #dc3545;
+    --darkblue: #212529;
+    --blocker: var(--purple);
+    --critical: var(--danger);
+    --high: #e67e22;
+    --low: #2ecc71;
+    --grey: #f1f0f0;
+    --lightGray: #bbbbbb;
+    --lightBlue: #64bfd7;
+    --deepblue: #0c1540;
+    --green: #51ac64
+}
+
+.btn {
+    font-size: 12px !important;
+
+}
+
+.container-fluid {
+    max-width: 1600px
+}
+
+body {
+    background: #34495e;
+    height: 100%;
+    background-size: auto;
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    border-radius: 0px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+    background-color: var(--mainColor2);
+}
+
+img {
+    max-width: 100%
+}
+
+.mainbox {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #f4f5f7;
+    color: var(--darkBlue);
+    word-wrap: break-word;
+    padding: 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.mainbox > .title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #212529;
+    padding: 10px 15px;
+    line-height: 2rem;
+    border-bottom: 1px solid #efefef;
+    font-family: 'Roboto', sans-serif
+}
+
+.mainbox > .title.withoutline {
+    border-bottom: 0
+}
+
+.mainbox > .title > .right {
+    margin-left: auto;
+    border-left: 1px solid #e8ebf5;
+    padding-left: 15px;
+    color: var(--darkBlue)
+}
+
+.mainbox > .title > .right:last-child {
+    border-left: 0px;
+    padding-left: 0;
+}
+
+.mainbox.bottomredborder {
+    border-bottom: 2px solid var(--grey);
+}
+
+.mainbox > .title > .right:hover {
+    color: var(--red);
+    text-decoration: none
+}
+
+.mainbox > .title > .right:after {
+    content: "";
+    clear: both;
+    display: Block
+}
+
+.mainbox > .title > svg {
+    color: var(--red);
+    width: 30px
+}
+
+.mainbox > .title:not(.withoutline):before {
+    bottom: -1px;
+    width: 120px;
+    height: 1px;
+    background: var(--darkred);
+    content: '';
+    left: 0;
+    position: absolute
+}
+
+.mainbox > .title:after {
+    content: "";
+    clear: both;
+    display: Block
+}
+
+.mainbox > .content {
+    z-index: 9;
+    position: relative;
+    padding: 15px 20px;
+}
+
+
+
+.clickable {
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    opacity: 0.9 !important;
+}
+
+
+.btn-lightGray {
+    border: 1px solid var(--lightGray) !important;
+    color: var(--lightGray) !important;
+}
+
+.btn-lightBlue {
+    border: 1px solid var(--lightBlue) !important;
+    color: var(--lightBlue) !important;
+}
+
+.btn-deepblue {
+    border: 1px solid var(--deepblue) !important;
+    color: var(--deepblue) !important;
+}
+
+.btn-green {
+    border: 1px solid var(--green) !important;
+    color: var(--green) !important;
+}
+
+
+.btn-lightGray:hover, .btn-lightGray.selected {
+    background-color: var(--lightGray) !important;
+    color: #fff !important;
+
+}
+
+.btn-lightBlue:hover, .btn-lightBlue.selected {
+    background-color: var(--lightBlue) !important;
+    color: #fff !important;
+}
+
+
+.btn-deepblue:hover, .btn-deepblue.selected {
+    background-color: var(--deepblue) !important;
+    color: #fff !important;
+}
+
+.btn-green:hover, .btn-green.selected {
+    background-color: var(--low) !important;
+    color: #fff !important;
+}
+
+.btn-Open:hover, .btn-Open.selected {
+    background-color: var(--success) !important;
+    color: #fff !important;
+}
+
+
+/* taskList */
+.taskList .badge.lightGray {
+    background-color: var(--lightGray);
+}
+
+.taskList .badge.green {
+    background-color: var(--green);
+}
+
+.taskList .badge.deepblue {
+    background-color: var(--deepblue);
+}
+
+.taskList .badge.lightBlue {
+    background-color: var(--lightBlue);
+}
+
+.taskList .badge.High {
+    background-color: var(--high);
+}
+
+.taskList .badge.Low {
+    background-color: var(--low);
+}
+
+.taskList .title > span > i {
+    margin-right: 310px;
+}
+
+.taskList .title > span.Blocker {
+    color: var(--blocker);
+}
+
+.taskList .title > span.Critical {
+    color: var(--critical);
+}
+
+.taskList .title > span.High {
+    color: var(--high);
+}
+
+.taskList .title > span.Low {
+    color: var(--low);
+}
+
+.taskList .mainbox > .title:not(.withoutline):before {
+    background: var(--dark) !important;
+}
+
+.taskList .mainbox.Blocker > .title:not(.withoutline):before {
+    background: var(--blocker) !important;
+}
+
+.taskList .mainbox.Critical > .title:not(.withoutline):before {
+    background: var(--critical) !important;
+}
+
+.taskList .mainbox.High > .title:not(.withoutline):before {
+    background: var(--high) !important;
+}
+
+.taskList .mainbox.Low > .title:not(.withoutline):before {
+    background: var(--low) !important;
+}
+
+.taskList .mainbox {
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.taskList .mainbox > .content {
+    font-size: 0.9rem;
+}
+
+.taskList .subTasks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid #efefef;
+    padding-top: 15px;
+}
+
+
+.taskList .subTasks > .subTask {
+    width: 48%;
+    background-color: #f5f6fa;
+    border-left: 2px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: .9rem;
+}
+
+.taskList .subTasks > .subTask:nth-child(2n+1) {
+    margin-right: 4%;
+}
+
+
+.taskList .subTasks .subTask > .title {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.taskList .subTasks .subTask > .content {
+    font-size: .8rem;
+    color: #333;
+    display: block;
+    clear: both;
+    word-wrap: break-word;
+}
+
+
+.taskList .subTasks .subTask.Blocker {
+    border-color: var(--blocker);
+}
+
+.taskList .subTasks .subTask.Critical {
+    border-color: var(--critical);
+}
+
+.taskList .subTasks .subTask.High {
+    border-color: var(--high);
+}
+
+.taskList .subTasks .subTask.Low {
+    border-color: var(--low);
+}
+
+.taskList .createSubTask:hover {
+    cursor: pointer;
+}
+
+.taskList .pagination .btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.taskList .closedSubtask {
+    opacity: 0.3;
+}
+
+@media screen and (max-width: 1199px) {
+    .taskList:not(.important) .subTasks > .subTask {
+        width: 100%;
+    }
+
+    .taskList:not(.important) .subTasks > .subTask:nth-child(2n+1) {
+        margin-right: 0%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .taskList.important .subTasks > .subTask {
+        width: 100%;
+    }
+
+    .taskList.important .subTasks > .subTask:nth-child(2n+1) {
+        margin-right: 0%;
+    }
+}
+
+/* taskList */
+
+
+@media only screen and (max-width: 692px) {
+}
